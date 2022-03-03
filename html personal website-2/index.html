@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="home.css"/>
+    <title>Jade Au Personal Website</title>
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="index.html"><img id="JA"  src="logo.svg"></a>
+      </li>
+      <li class="nav-item" id="about-nav">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="project.html">Project</a>
+      </li>
+      <li class="nav-item">
+        <a href="artwork.html">Artwork</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html"><button class="btn-primary">Contact</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+      <div class="card-box">
+        <ul class="card-box-list">
+          <li class="card-box-item">
+            
+            <h1 id="typewrite">
+              <a href="" class="typewrite" data-period="2000" data-type='[ "I am a Web Developer.", "I am a Software Engineer.", "I love Art and Designs.", "I love STEM." ]'>
+                <span class="wrap"></span>
+              </a>
+            </h1>
+            <br>
+            <h2 id="hi">"Be formless, shapeless, like water." - Bruce Lee </h2>
+            <div>
+            <a href="https://www.linkedin.com/in/wingkiau/"><img id="linkedin" src="linkedin.svg"></a>
+            <a href="https://github.com/JadeWKA"><img id="github" src="github.svg"></a>
+            <a href="mailto:jade.wk.au@gmail.com"><img id="email" src="email.svg"></a>
+            <a href="#hkny"><img id="more" src="more.svg"></a></div>
+        </li>
+
+          <li class="card-box-item">
+            <img src="jade_5.svg" id="pfp"/>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hkny" id="hkny">
+        <ul class="nyhk-list">
+          <li class="nyhk-item">
+        <h1 id="hk">Hong Kong Native</h1>
+        <h1 id="ny">Brew in New York</h1>
+        <p id="from">I came to New York in 2019.
+          Currently studying Computer Science and information Security as a Senior.</p>
+      </li>
+         <li class="nyhk-item">
+           <img href="nyhk.svg" src="nyhk.svg" id="hkny">
+         </li>
+      </ul>
+      </div>
+
+      <div class="about">
+        <ul class="about-list">
+          <li class="about-item">
+            <img href="about1.svg" src="about1.svg" id="about1">
+            
+            <img href="about2.svg" src="about2.svg" id="about2">
+            
+      </li>
+         <li class="about-item">
+          <p id="aboutme">I was a Building Services Engineer, a Telecommunication Specialist, and a Product Assistant in Hong Kong. <br><br>
+            My major was Mechanical Engineering. <br><br>
+            My previous jobs intrigued me and made me want to learn more about Mathematics and Computer Science. I also love Art and Designs.<br><br>
+             I especially interested in Web development and Software Development, I get to be creative and analytical. </p>
+             <a href="https://www.linkedin.com/in/wingkiau/"><img href="linkin" src="linkin-btn.svg" id="linkin"></a>
+         </li>
+      </ul>
+      </div>
+
+       <div class="tech">
+         <ul class="tech-list">
+           <li class="tech-item">
+             <img href="PC.svg" src="PC.svg" id="PC">
+             </li>
+             <li class="tech-item"><img href="phone.svg" src="phone.svg" id="phone"></li>
+         </ul>
+         <li class="tech-item"><a href="project.html"><img href="project-btn.svg" src="project-btn.svg" id="prj-btn"></a><p id="tech-p">I work on Web Development and iOS Development</p><br></li>
+       </div>
+
+</body>
+
+<script>
+  var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.09em solid rgb(29, 43, 105)}";
+    document.body.appendChild(css);
+};
+</script>
+</html>

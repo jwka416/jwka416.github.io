@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap');
+
+:root {
+    /*   color variables */
+    --clr-primary: #9892EC;
+    --clr-primary-hover: #a38bbb;
+    --clr-primary-dark: #583848;
+    /* --clr-gray100: #a9c8cc; */
+    --clr-gray200: #ffffff;
+  
+    /*   border radius */
+    --radius: 0.2rem;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Montserrat, sans-serif;
+    background: linear-gradient(90deg, #CBD9FF, #8D9FF0);
+    /* #FFCCCC #CCFFFF*/
+  }
+  
+  .nav-list {
+    background: #9192D4;
+    /* rgb(196, 163, 166) */
+    box-shadow: 0px 0px 5px var(--clr-gray200);
+    padding: 1rem 0;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.2%;
+  }
+  
+  .nav-item {
+    list-style: none;
+    margin-right: 3rem;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 100ms ease-in;
+  }
+  
+  .nav-item a:hover {
+    color: var(--clr-primary-dark);
+  }
+  
+  .nav-item:first-child {
+    margin-right: auto;
+    margin-left: 7rem;
+  }
+
+  #about-nav{
+    margin-left: 20%;
+  }
+  
+  .btn-primary {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    background: var(--clr-primary);
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0.7rem;
+    cursor: pointer;
+    transition: all 20ms ease-in;
+    color: #100d3f;
+  }
+  
+  .btn-primary:hover {
+    background: var(--clr-primary-hover);
+  }
+
+  .card-box{
+    background-color: rgb(232, 239, 255);
+    /* rgb(199, 206, 238) */
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 12px 10px #494949;
+    margin: 0 auto;
+  }
+  
+  .card-box-list {
+    display: flex;
+    margin-top: 8vh;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #pfp{
+    width: 80%;
+    margin-left: 8%;
+    background-color: #c0a1a1;
+    padding: 3%;
+    border-radius: 2000px;
+  }
+
+  .card-box-list:first-child {
+    margin-right: auto;
+    margin-left: 0.2rem;
+    flex: 1;
+  }
+
+  .card-box-item {
+    list-style: none;
+    margin-right: 1rem;
+    flex: 1;
+  }
+
+  #JA {
+    height: 50px;
+  }
+  
+  #hi {
+    font-size: 20px;
+    color: rgb(71, 90, 177);
+    font-family: 'roboto';
+    font-weight: 300;
+    margin-top: 5%;
+    margin-left: 13%;
+    margin-bottom: 10%;
+    font-style: italic;
+  }
+  
+  .typewrite {
+    text-align: center;
+    font-size: 3.2vw;
+    font-family: 'roboto';
+  }
+  
+  * { color:rgb(29, 43, 105); text-decoration: none;}
+
+  #typewrite{
+    margin-top: 28%;
+    margin-left: 8%;
+  }
+  
+  #more {
+    float: right;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+
+  #linkedin {
+    float: left;
+    margin-top: 6%;
+    margin-left: 11%;
+    height: 3.5vh;
+  }
+
+  #github {
+    float: left;
+    margin-top: 6%;
+    margin-left: 4%;
+    height: 3.5vh;
+  }
+
+  #email {
+    float: left;
+    margin-top: 6%;
+    margin-left: 4%;
+    height: 3.5vh;
+  }
+
+  .hkny{
+    width: 88vw;
+    background: linear-gradient(285.97deg, #C1DACD 21.29%, #7FA2BB 57.12%, #577992 99.71%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    border-radius: 15px;
+    /* Rectangle 14 */
+    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.7);
+
+  }
+
+  .nyhk-list{
+    display: flex;
+    margin-top: 8vh;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  .nyhk-item {
+    list-style: none;
+    margin-right: 1rem;
+    flex: 1;
+  }
+
+  #hk {
+    font-family: Roboto; 
+    font-style: italic; 
+    font-weight: 1; 
+    font-size: 3vw; 
+    line-height: 90px; 
+    margin-left: 15%;
+    color: #FFFFFF; 
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8); 
+    transform: rotate(-5deg); 
+    margin-top: 20%;
+  }
+
+  #ny {
+    font-family: Roboto; 
+    font-style: italic; 
+    font-weight: 1; 
+    font-size: 3vw; 
+    line-height: 90px; 
+    margin-left: 25%;
+    color: #FFFFFF; 
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8); 
+    transform: rotate(2deg); 
+  }
+
+  #hkny{
+    width: 90%;
+  }
+
+  #from{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 10;
+    font-size: 16px;
+    /* line-height: 23px; */
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-top: 6rem;
+  }
+
+  .about{
+    width: 88vw;
+    background: linear-gradient(180deg, #7372AD 0.01%, #B7D1EC 99.98%, #000000 99.99%); 
+    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.7); 
+    border-radius: 15px; 
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-list{
+    display: flex;
+    margin-top: 8vh;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  .about-item {
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  #about1{
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+
+  #about2{
+    width: 60%;
+    margin-top: 10%;
+    margin-left: 14%;
+  }
+
+  #aboutme{
+    padding: 5%;
+    background-color: #BAD7FF;
+    margin-right: 25%;
+    font-style: italic;
+    font-family: Roboto;
+    font-size: 1.8vw;
+    width: 95%;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  #linkin{
+    float: right;
+    margin-right: 5%;
+  }
+
+  .tech{
+    width: 88vw;
+    background: linear-gradient(93.39deg, #FFC8C8 19.49%, #FFDEDE 50.59%, #FCD08E 83.66%); 
+    box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.5); 
+    border-radius: 15px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+
+  .tech-list{
+    display: flex;
+    margin-top: 8vh;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  .tech-item {
+    list-style: none;
+    margin-right: 1rem;
+    flex: 1;
+  }
+
+  #PC{
+    width: 85%;
+    margin-top: 10vh;
+    margin-left: 10vw;
+  }
+
+  #phone{
+    width: 50%;
+    margin-top: 15vh;
+    margin-left: 5vw;
+  }
+
+  #tech-p{
+    text-align: center;
+    margin-bottom: 5vh;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+  }
+
+  #prj-btn{
+    margin-left: 10vw;
+    width: 13rem;
+  }
+
+  
